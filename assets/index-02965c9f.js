@@ -1336,6 +1336,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
     }
     h1{
         background-color:#992049;
+        color:#F5F5F5;
     }
     h2{
         max-width: fit-content;
@@ -1362,7 +1363,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
     }
 
     img{
-        // all:initial;
+        all:initial;
         box-shadow: none;
         display: block;
         margin: auto;
@@ -1379,6 +1380,8 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
         margin-left: auto;
         margin-right: auto;
         border-top: 2px solid #000000;
+        box-sizing: border-box;
+        padding: 15px;
     }
 
     //allows same size
@@ -1407,7 +1410,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
         grid-template-columns: 1fr 1fr;
         grid-gap: 20px;
     }
-`,X0=()=>N(wA,{children:[b("div",{className:"resume",children:b("img",{src:cA,onClick:()=>window.open(fA,"_blank")})}),N("div",{children:[b("h2",{children:"Classes Taken"}),b(gA,{})]})]}),wA=V.div`
+`,X0=()=>N(wA,{children:[b("div",{className:"resume",children:b("img",{className:"imgResume",src:cA,onClick:()=>window.open(fA,"_blank")})}),N("div",{children:[b("h2",{children:"Classes Taken"}),b(gA,{})]})]}),wA=V.div`
 
     .resume{
         display: block;
@@ -1421,13 +1424,13 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
     h2{
         padding-top:65px;
     }
-    img{
+    .imgResume{
         border-radius: 10px;
         border: 2px solid #000000;
-        box-shadow: 5px 5px 10px 1px #000000;
+
     }
     transform:scale(0.89);
-    img:hover{
+    .imgResume:hover{
         transform: scale(1.1);
         transition-duration: .5s;
     }
