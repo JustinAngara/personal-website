@@ -1330,7 +1330,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
             background-color: green;
         }
     }
-`,fA="/personal-website/assets/JAngara-cebeed0b.jpg",dA="/personal-website/assets/JustinAngaraResume-f8b7a258.pdf",pA="/personal-website/assets/wisc-fbfa94a9.png",mA="/personal-website/assets/pt-17b12208.png",hA="/personal-website/assets/berk-69fa9f6d.png";let X0=[{id:1,courseTitle:"Front-End Software Development Bootcamp",from:"Promineo Tech, Elgin Community College",img:mA,desc:"Explored framework integration to speed up development and build responsive grid layouts that meet today's requirements for mobiles,tablets, and desktops through a variety of different technologies. Created dynamic web applications using HTML, CSS, JavaScript, React, and other technologies. Learned the foundational skills to design and develop user-friendly interfaces. Gained hands-on experience with HTML, CSS, JavaScript, React, and other cutting-edge technologies used by top companies in the industry."},{id:2,courseTitle:"Computer Science: 300",from:"University of Wisconsin-Madison",img:pA,desc:"Introduction to Object-Oriented Programming using classes and objects to solve more complex problems. Introduces array-based and linked data structures: including lists, stacks, and queues. Programming assignments require writing and developing multi-class (file) programs using interfaces, generics, and exception handling to solve challenging real world problems. Topics reviewed include reading/writing data and objects from/to files and exception handling, and command line arguments. Topics introduced: object-oriented design; class vs. object; create and define interfaces and iterators; searching and sorting; abstract data types (List,Stack,Queue,PriorityQueue(Heap),Binary Search Tree); generic interfaces (parametric polymorphism); how to design and write test methods and classes; array based vs. linked node implementations; introduction to complexity analysis; recursion."},{id:3,courseTitle:"Introduction to Databases x409.1",from:"University of California, Berkeley",img:hA,desc:" Learned the principles of effective database design and gain a general overview of database management systems (DBMS). The emphasis is on relational and NoSQL database management systems which have a variety of applications in modern website development, software development, and data science. Students learn dimensional, object-oriented, and object-relational architectures, along with best practices for managing data integrity and security."}];const Q7=({courseTitle:e,from:t,img:n,desc:r})=>(console.log("inside course item"),b(vA,{children:N("div",{children:[b("h1",{children:e}),b("h2",{children:t}),b("img",{height:"250px",width:"250px",src:n}),b("h3",{className:"desc",children:r})]})}));Q7.propTypes={prop:z.object};const vA=V.div`
+`,fA="/personal-website/assets/JAngara-cebeed0b.jpg",dA="/personal-website/assets/JustinAngaraResume-f8b7a258.pdf",pA="/personal-website/assets/wisc-fbfa94a9.png",mA="/personal-website/assets/pt-17b12208.png",hA="/personal-website/assets/berk-69fa9f6d.png";let X0=[{id:1,courseTitle:"Front-End Software Development Bootcamp",from:"Promineo Tech, Elgin Community College",img:mA,desc:"Explored framework integration to speed up development and build responsive grid layouts that meet today's requirements for mobiles,tablets, and desktops through a variety of different technologies. Created dynamic web applications using HTML, CSS, JavaScript, React, and other technologies. Learned the foundational skills to design and develop user-friendly interfaces. Gained hands-on experience with HTML, CSS, JavaScript, React, and other cutting-edge technologies used by top companies in the industry."},{id:2,courseTitle:"Computer Science: 300",from:"University of Wisconsin-Madison",img:pA,desc:"Introduction to Object-Oriented Programming using classes and objects to solve more complex problems. Introduces array-based and linked data structures: including lists, stacks, and queues. Programming assignments require writing and developing multi-class (file) programs using interfaces, generics, and exception handling to solve challenging real world problems. Topics reviewed include reading/writing data and objects from/to files and exception handling, and command line arguments. Topics introduced: object-oriented design; class vs. object; create and define interfaces and iterators; searching and sorting; abstract data types (List,Stack,Queue,PriorityQueue(Heap),Binary Search Tree); generic interfaces (parametric polymorphism); how to design and write test methods and classes; array based vs. linked node implementations; introduction to complexity analysis; recursion."},{id:3,courseTitle:"Introduction to Databases x409.1",from:"University of California, Berkeley",img:hA,desc:" Learned the principles of effective database design and gain a general overview of database management systems (DBMS). The emphasis is on relational and NoSQL database management systems which have a variety of applications in modern website development, software development, and data science. Students learn dimensional, object-oriented, and object-relational architectures, along with best practices for managing data integrity and security."}];const Q7=({courseTitle:e,from:t,img:n,desc:r})=>(console.log("inside course item"),b(vA,{children:N("div",{children:[b("h1",{children:e}),b("h2",{children:t}),b("img",{height:"250px",width:"250px",src:n}),b("br",{}),b("h3",{className:"desc",children:r})]})}));Q7.propTypes={prop:z.object};const vA=V.div`
     h1,h2,h3{
         color: black;
     }
@@ -1341,6 +1341,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
         max-width: fit-content;
         margin-inline: auto;
         font-size: 18px;
+
     }
 
     h3{
@@ -1361,15 +1362,17 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
     }
 
     img{
+        all:initial;
         box-shadow: none;
         display: block;
         margin: auto;
-
+        // padding-bottom:10px;
+        border: 1px solid #000000;
     }
     img:hover{
         -webkit-transform: none;
         transform: none;
-        padding-bottom:10px;
+
     }
     .desc{
         max-width: fit-content;
