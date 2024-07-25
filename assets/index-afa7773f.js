@@ -1361,9 +1361,15 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
     }
 
     img{
-        all: initial;
+        box-shadow: none;
         display: block;
         margin: auto;
+
+    }
+    img:hover{
+        -webkit-transform: none;
+        transform: none;
+        padding-bottom:10px;
     }
     .desc{
         max-width: fit-content;
