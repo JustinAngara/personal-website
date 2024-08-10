@@ -5,6 +5,7 @@ import styled from "styled-components";
 import SiteLogo from "../SiteLogo/SiteLogo.jsx";
 import MainMenu from "./MainMenu.jsx";
 import Hamburger from "./Hamburger.jsx";
+import SmallMainMenu from "./SmallMainMenu.jsx";
 
 const Small = () => {
     const [showMenu, showMenuUpdate] = useState(false);
@@ -26,7 +27,9 @@ const Small = () => {
         <SmallStyled>
             <Hamburger toggle={toggle} />
             <SiteLogo />
-            {showMenu && <MainMenu handle={handleButtonClick} />}
+
+            {showMenu && <MainMenu isLargeEnough={false} handle={handleButtonClick} />}
+
         </SmallStyled>
     );
 };
@@ -44,32 +47,15 @@ const SmallStyled = styled.div`
         padding: 20px;
         max-width: 330px;
     }
-
-    nav {
-        position: fixed;
+    nav{
+        position:absolute;
+        bottom:0;
         left: 0px;
         top: 300px;
         right: 0px;
         bottom: 0px;
-
-        z-index: 100;
-
-        background-color: #000000;
-
-        a {
-            display: block;
-
-            padding: 10px;
-            border-bottom: solid 1px #999999;
-
-            color: white;
-            text-decoration: none;
-
-            &:hover,
-            &:active,
-            &:focus {
-                background-color: #002a2a;
-            }
-        }
     }
+
+
+
 `;

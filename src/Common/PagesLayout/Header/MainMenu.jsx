@@ -14,7 +14,9 @@ const MainMenu = ({ isLargeEnough }) => {
                 <li> <NavBtn pathObj = {["/course-work", "Resume"]} isLargeEnough={isLargeEnough}/> </li>
                 <li> <NavBtn pathObj = {["/staff", "Projects"]} isLargeEnough={isLargeEnough}/> </li>
                 <li> <NavBtn pathObj = {["/contact", "Contact"]} isLargeEnough={isLargeEnough}/> </li>
-                <div className="socials">
+
+                {
+                isLargeEnough&&<div className="socials">
                     <Button circular icon='linkedin' size='huge' onClick={()=>{
                         openInNewTab("https://www.linkedin.com/in/justinangara/");
                     }}/>
@@ -25,6 +27,7 @@ const MainMenu = ({ isLargeEnough }) => {
                         window.open('mailto:justin.angara@gmail.com?subject=Subject&body= ');
                     }}/>
                 </div>
+                }
             </ul>
 
 
