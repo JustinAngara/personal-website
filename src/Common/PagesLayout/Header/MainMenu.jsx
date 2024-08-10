@@ -5,15 +5,15 @@ import { useEffect, useRef,useState } from "react";
 import { ButtonContent, Button, Icon, Dropdown } from 'semantic-ui-react'
 import NavBtn from "./ButtonToNav.jsx"
 
-const MainMenu = ({ handle }) => {
-
+const MainMenu = ({ isLargeEnough }) => {
+    console.log(`isLargeEnough: ${isLargeEnough}`);
     return (
         <MainMenuStyled>
             <ul>
-                <li> <NavBtn pathObj = {["/", "Home"]} /> </li>
-                <li> <NavBtn pathObj = {["/course-work", "Resume"]}/> </li>
-                <li> <NavBtn pathObj = {["/staff", "Projects"]}/> </li>
-                <li> <NavBtn pathObj = {["/contact", "Contact"]}/> </li>
+                <li> <NavBtn pathObj = {["/", "Home"]} isLargeEnough={isLargeEnough}/> </li>
+                <li> <NavBtn pathObj = {["/course-work", "Resume"]} isLargeEnough={isLargeEnough}/> </li>
+                <li> <NavBtn pathObj = {["/staff", "Projects"]} isLargeEnough={isLargeEnough}/> </li>
+                <li> <NavBtn pathObj = {["/contact", "Contact"]} isLargeEnough={isLargeEnough}/> </li>
                 <div className="socials">
                     <Button circular icon='linkedin' size='huge' onClick={()=>{
                         openInNewTab("https://www.linkedin.com/in/justinangara/");
@@ -35,7 +35,6 @@ const MainMenu = ({ handle }) => {
 
 
 const openInNewTab = (url) => {
-    toggle(true);
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
     if (newWindow) newWindow.opener = null
 }

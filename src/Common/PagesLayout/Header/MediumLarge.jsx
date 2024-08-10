@@ -35,7 +35,7 @@ const MediumLarge = () => {
             <Inset>
                 <div className="inset">
                     <div className="menus">
-                        <MainMenu></MainMenu>
+                        <MainMenu isLargeEnough={true}></MainMenu>
                     </div>
                     <div className="logo">
                         <SiteLogo />

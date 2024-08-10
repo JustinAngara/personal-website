@@ -24,7 +24,7 @@ const PagesLayout = () => {
         if(!isLoaded){
             navigate('/splash');
             setLoad(true);
-            document.title = "Justin's portfolio";
+
         }
     });
     return (
