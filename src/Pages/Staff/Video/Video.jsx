@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player';
 const Video = ({ link }) => {
     return (
     <VideoStyled>
-        <br/><ReactPlayer  width="300px" url={link} />
+        <br/><ReactPlayer  width="90%" url={link} />
         {/* will add description soon */}
 
     </VideoStyled>);
@@ -19,7 +19,7 @@ Video.propTypes = {
 
 const VideoStyled = styled.div`
     // background-color:black;
-    width:70%;
+    // width:70%;
     position: relative;
-    padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+    // padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
 `;
