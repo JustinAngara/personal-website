@@ -26,9 +26,10 @@ const Slideshow = () => {
 export default Slideshow;
 
 const SlideshowStyled = styled.div`
-    .blocke{
+    .block{
         // padding-top:600px;
         // background-color:white;
+        background-color:rgba(0,0,0,0);
     }
     .carousel-inner &gt; .item &gt; img {
 

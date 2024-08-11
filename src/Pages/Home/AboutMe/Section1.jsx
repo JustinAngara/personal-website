@@ -21,8 +21,8 @@ const Section1 = () => {
             Justin Angara's Journey
         </p>
 
-        <p>
-            &emsp; I started my programming journey back in 2019 (age 13) with the programming language <b>Java</b>,
+        <p className="description">
+            &emsp;I started my programming journey back in 2019 (age 13) with the programming language <b>Java</b>,
             where I learned topics such as <b>OOP, JavaCV (an interface that uses OpenCV technology), automated projects, and more!</b>
         </p>
 
@@ -55,6 +55,9 @@ const Section1Styled = styled.div`
     }
     button{
         border-radius:50%
+    }
+    .description{
+        font-size:2.75vh;
     }
 
 `;

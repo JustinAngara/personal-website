@@ -55,7 +55,10 @@ const SmallStyled = styled.div`
         top: 300px;
         right: 0px;
         bottom: 0px;
-        background-color:rgb(0,0,0,.85);
+        background-color:rgb(0,0,0,.35);
+        border-radius:10px;
+
+
     }
 
 

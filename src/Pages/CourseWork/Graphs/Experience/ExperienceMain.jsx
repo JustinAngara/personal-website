@@ -28,7 +28,7 @@ export default ExperienceMain;
 
 const ExperienceMainStyled = styled.div`
     .blocked{
-        font-size:3.5em;
+        font-size:3.25em;
         padding-top:15%;
         padding-bottom:10%;
         width:95%;

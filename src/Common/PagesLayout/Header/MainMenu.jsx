@@ -64,6 +64,11 @@ const MainMenuStyled = styled.nav`
         display: inline-block;
         list-style-type: none;
     }
+    .center{
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
     li{
         padding-bottom:10%;
     }
