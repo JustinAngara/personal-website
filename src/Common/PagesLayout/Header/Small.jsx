@@ -21,6 +21,7 @@ const Small = () => {
     const handleButtonClick = () => {
         // Logic to execute when a button is clicked
         console.log('Button clicked from child component');
+        hideMenu();
     };
 
     return (

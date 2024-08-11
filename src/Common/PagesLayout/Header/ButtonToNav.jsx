@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { ButtonContent, Button, Icon } from 'semantic-ui-react'
 import ReactPlayer from "react-player";
 import { useNavigate } from 'react-router-dom';
-const ButtonToNav = ({pathObj, isLargeEnough}) => {
+const ButtonToNav = ({pathObj, isLargeEnough, handle}) => {
 
     const navigate = useNavigate()
     return (
@@ -13,6 +13,7 @@ const ButtonToNav = ({pathObj, isLargeEnough}) => {
         <div>
             <Button basic inverted color='black' animated size='medium' onClick={()=>{
                 navigate(pathObj[0]);
+                handle();
                 scrollDown(isLargeEnough)
             }}>
 

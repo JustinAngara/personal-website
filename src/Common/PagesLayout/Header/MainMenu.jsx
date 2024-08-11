@@ -5,15 +5,16 @@ import { useEffect, useRef,useState } from "react";
 import { ButtonContent, Button, Icon, Dropdown } from 'semantic-ui-react'
 import NavBtn from "./ButtonToNav.jsx"
 
-const MainMenu = ({ isLargeEnough }) => {
-    console.log(`isLargeEnough: ${isLargeEnough}`);
+const MainMenu = ({ isLargeEnough, handle }) => {
+    console.log(`isLargeEnough: ${isLargeEnough}, ${handle}`);
+
     return (
         <MainMenuStyled>
             <ul>
-                <li> <NavBtn pathObj = {["/", "Home"]} isLargeEnough={isLargeEnough}/> </li>
-                <li> <NavBtn pathObj = {["/course-work", "Resume"]} isLargeEnough={isLargeEnough}/> </li>
-                <li> <NavBtn pathObj = {["/staff", "Projects"]} isLargeEnough={isLargeEnough}/> </li>
-                <li> <NavBtn pathObj = {["/contact", "Contact"]} isLargeEnough={isLargeEnough}/> </li>
+                <li> <NavBtn pathObj = {["/", "Home"]} isLargeEnough={isLargeEnough} handle={handle}/> </li>
+                <li> <NavBtn pathObj = {["/course-work", "Resume"]} isLargeEnough={isLargeEnough} handle={handle}/> </li>
+                <li> <NavBtn pathObj = {["/staff", "Projects"]} isLargeEnough={isLargeEnough} handle={handle}/> </li>
+                <li> <NavBtn pathObj = {["/contact", "Contact"]} isLargeEnough={isLargeEnough} handle={handle}/> </li>
 
                 {
                 isLargeEnough&&<div className="socials">
