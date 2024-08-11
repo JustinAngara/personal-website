@@ -126,6 +126,11 @@ Error generating stack: `+o.message+`
         display: inline-block;
         list-style-type: none;
     }
+    .center{
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
     li{
         padding-bottom:10%;
     }
@@ -1006,7 +1011,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         top: 300px;
         right: 0px;
         bottom: 0px;
-        background-color:rgb(0,0,0,.85);
+        background-color:rgb(0,0,0,.35);
+        border-radius:10px;
+
+
     }
 
 
@@ -1076,9 +1084,10 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     }
 
 `,UN=()=>S(BN,{children:S("div",{className:"block",children:S(i2.Carousel,{infiniteLoop:!0,autoPlay:!0,children:jN.map(e=>S(u2,{slide:e},e.id))})})}),BN=H.div`
-    .blocke{
+    .block{
         // padding-top:600px;
         // background-color:white;
+        background-color:rgba(0,0,0,0);
     }
     .carousel-inner &gt; .item &gt; img {
 
@@ -1117,7 +1126,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     // background-color:white;
 
 
-`,KN=()=>{const e=P.useRef([]),[t,n]=P.useState(0);return _(qN,{children:[S("p",{className:"question center",children:"Justin Angara's Journey"}),_("p",{children:["  I started my programming journey back in 2019 (age 13) with the programming language ",S("b",{children:"Java"}),", where I learned topics such as ",S("b",{children:"OOP, JavaCV (an interface that uses OpenCV technology), automated projects, and more!"})]}),S("div",{className:"center",children:S(ai,{color:"black",size:"massive",icon:"angle down",onClick:()=>{const i=(t+1)%e.current.length;e.current[i].scrollIntoView({behavior:"smooth"})}})}),S("div",{className:"block"}),S(WN,{}),S("div",{className:"section2 center",ref:i=>e.current[0]=i}),S(VN,{})]})},qN=H.div`
+`,KN=()=>{const e=P.useRef([]),[t,n]=P.useState(0);return _(qN,{children:[S("p",{className:"question center",children:"Justin Angara's Journey"}),_("p",{className:"description",children:[" I started my programming journey back in 2019 (age 13) with the programming language ",S("b",{children:"Java"}),", where I learned topics such as ",S("b",{children:"OOP, JavaCV (an interface that uses OpenCV technology), automated projects, and more!"})]}),S("div",{className:"center",children:S(ai,{color:"black",size:"massive",icon:"angle down",onClick:()=>{const i=(t+1)%e.current.length;e.current[i].scrollIntoView({behavior:"smooth"})}})}),S("div",{className:"block"}),S(WN,{}),S("div",{className:"section2 center",ref:i=>e.current[0]=i}),S(VN,{})]})},qN=H.div`
     .question{
         font-size:1em;
     }
@@ -1130,6 +1139,9 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     }
     button{
         border-radius:50%
+    }
+    .description{
+        font-size:2.75vh;
     }
 
 `,YN=()=>_(QN,{children:[S("br",{}),S(ki,{children:S("div",{className:"section1",children:S(KN,{})})})]}),QN=H.div`
@@ -1517,7 +1529,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 `,GF=()=>_(KF,{children:[S("p",{className:"blocked center",children:"<Experience />"}),_(im.VerticalTimeline,{children:[S(HF,{}),S(im.VerticalTimelineElement,{iconStyle:{background:"rgb(240, 90, 70)",color:"#fff"}})]})]}),KF=H.div`
     .blocked{
-        font-size:3.5em;
+        font-size:3.25em;
         padding-top:15%;
         padding-bottom:10%;
         width:95%;
@@ -1527,7 +1539,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         margin-left: auto;
         margin-right: auto;
     }
-`,W0=()=>S(qF,{children:_(ki,{children:[S("div",{className:"clear",children:S(CF,{sx:{bgcolor:"#111111"},children:S("embed",{width:"100%",height:"700",src:X$,type:"application/pdf"})})}),S("div",{className:"Experience",children:S(GF,{})}),_("div",{className:"course",children:[S("h2",{children:"Classes Taken"}),S(oM,{})]})]})}),qF=H.div`
+`,W0=()=>S(qF,{children:_(ki,{children:[S("div",{className:"clear",children:S(CF,{sx:{bgcolor:"rgba(0, 0, 0, 0);"},children:S("embed",{width:"100%",height:"700",src:X$,type:"application/pdf"})})}),S("div",{className:"Experience",children:S(GF,{})}),_("div",{className:"course",children:[S("h2",{children:"Classes Taken"}),S(oM,{})]})]})}),qF=H.div`
     .clear{
         all: initial;
 
