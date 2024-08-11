@@ -13,9 +13,11 @@ const ButtonToNav = ({pathObj, isLargeEnough, handle}) => {
         <div>
             <Button basic inverted color='black' animated size='medium' onClick={()=>{
                 navigate(pathObj[0]);
-                handle();
-
                 scrollDown()
+                if(!isLargeEnough){
+                    handle();
+                }
+
             }}>
 
                 <ButtonContent visible>{pathObj[1]}</ButtonContent>
