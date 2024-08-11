@@ -4,7 +4,7 @@ import { ButtonContent, Button, Icon } from 'semantic-ui-react'
 import ReactPlayer from "react-player";
 import { useNavigate } from 'react-router-dom';
 const ButtonToNav = ({pathObj, isLargeEnough, handle}) => {
-
+    console.log(`button to nav ${isLargeEnough}`);
     const navigate = useNavigate()
     return (
     <ButtonToNavStyled>
@@ -14,7 +14,8 @@ const ButtonToNav = ({pathObj, isLargeEnough, handle}) => {
             <Button basic inverted color='black' animated size='medium' onClick={()=>{
                 navigate(pathObj[0]);
                 handle();
-                scrollDown(isLargeEnough)
+
+                scrollDown()
             }}>
 
                 <ButtonContent visible>{pathObj[1]}</ButtonContent>
@@ -26,10 +27,10 @@ const ButtonToNav = ({pathObj, isLargeEnough, handle}) => {
 
     </ButtonToNavStyled>);
 }
-const scrollDown = (isLargeEnough) => {
-    if(isLargeEnough){
-        window.scrollBy({ top: 525, behavior: "smooth" });
-    }
+const scrollDown = () => {
+
+    window.scrollBy({ top: 525, behavior: "smooth" });
+
 }
 
 
