@@ -18,10 +18,10 @@ const Staff = () => {
                 <div className='videos'>
 
 
-                    <Video link='https://www.youtube.com/watch?v=LSpHdY5iI60&feature=youtu.be'/>
+                    {/* <Video link='https://www.youtube.com/watch?v=LSpHdY5iI60&feature=youtu.be'/> */}
                     {/* <Video link='https://www.youtube.com/watch?v=M1UK8vWAlyo&feature=youtu.be' /> */}
-                    <Video link='https://youtu.be/81xeJecRxg0' />
-                    <Video link='https://youtu.be/BIgNc-o56SU' />
+                    {/* <Video link='https://youtu.be/81xeJecRxg0' />
+                    <Video link='https://youtu.be/BIgNc-o56SU' /> */}
                 </div>
 
             </Inset>

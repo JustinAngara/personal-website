@@ -21,7 +21,7 @@ export const tabbedData = [
         title: 'Mission',
         text: `
         <p>
-            <b>Justin</b> hopes to expand his programming skills through diverse oppertunities!
+            <b>Justin</b> hopes to expand his programming skills through diverse opportunities!
         </p>`,
     },
     {
