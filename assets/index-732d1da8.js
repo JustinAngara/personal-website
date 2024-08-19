@@ -1141,7 +1141,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         border-radius:50%
     }
     .description{
-        font-size:2.75vh;
+        font-size:3.25vh;
     }
 
 `,YN=()=>_(QN,{children:[S("br",{}),S(ki,{children:S("div",{className:"section1",children:S(KN,{})})})]}),QN=H.div`
@@ -1286,7 +1286,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     // width:70%;
     position: relative;
     // padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
-`;const gI=()=>S(vI,{children:_(ki,{children:[S("h1",{children:"Projects"}),S(mI,{}),_("div",{className:"proj",children:[_("h2",{children:["Chess MiniMax Algorithm ",S("br",{})," (incorporated with real life moves and a table base)"]}),S("iframe",{width:"75%",height:"700",src:"//jsfiddle.net/AngaraJustin/dxqk26nv/223/embedded/result/",allowfullscreen:"allowfullscreen",allowpaymentrequest:!0,frameborder:"0"})]}),S("h1",{children:"My Videos"}),S("div",{className:"videos"})]})}),vI=H.div`
+`;const gI=()=>S(vI,{children:_(ki,{children:[S("h1",{children:"Projects"}),S(mI,{}),_("div",{className:"proj",children:[_("h2",{children:["Chess MiniMax Algorithm ",S("br",{})," (incorporated with real life moves and a table base)"]}),S("iframe",{width:"75%",height:"700",src:"//jsfiddle.net/AngaraJustin/dxqk26nv/223/embedded/result/",allowfullscreen:"allowfullscreen",allowpaymentrequest:!0,frameborder:"0"})]}),S("div",{className:"videos"})]})}),vI=H.div`
     a {
         color: #FFFFFF;
         text-decoration: none;
