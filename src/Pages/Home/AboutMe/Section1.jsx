@@ -57,7 +57,7 @@ const Section1Styled = styled.div`
         border-radius:50%
     }
     .description{
-        font-size:2.75vh;
+        font-size:3.25vh;
     }
 
 `;

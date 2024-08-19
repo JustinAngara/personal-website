@@ -14,7 +14,7 @@ const Staff = () => {
                     <h2>Chess MiniMax Algorithm <br/> (incorporated with real life moves and a table base)</h2>
                     <iframe width="75%" height="700" src="//jsfiddle.net/AngaraJustin/dxqk26nv/223/embedded/result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
                 </div>
-                <h1>My Videos</h1>
+                {/* <h1>Video Project Showcase <p>COMING SOON</p></h1> */}
                 <div className='videos'>
 
 
