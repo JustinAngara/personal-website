@@ -64,7 +64,13 @@ let timeData = [
         c:'First Year Education',
         p:'Enrolled at UW-Madison for my Computer Science degree'
     },
-
+    {
+        id: 10,
+        date: '2024',
+        h: 'University of Wisconsin-Madison',
+        c:'Pi Kappa Phi - Rush Chair & Member',
+        p:'Developed a comprehensive rush strategy to attract high-quality potential new members. Facilatated over 600+ (1/6 of the entire class of 2028) students for social events '
+    },
 
 
 ]
