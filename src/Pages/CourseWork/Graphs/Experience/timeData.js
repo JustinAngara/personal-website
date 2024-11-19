@@ -68,8 +68,8 @@ let timeData = [
         id: 10,
         date: '2024',
         h: 'University of Wisconsin-Madison',
-        c:'Pi Kappa Phi - Rush Chair & Member',
-        p:'Developed a comprehensive rush strategy to attract high-quality potential new members. Facilatated over 600+ (1/6 of the entire class of 2028) students for social events '
+        c:'Pi Kappa Phi - Recruitment Chair',
+        p:'Developed a comprehensive recruitment strategy to attract high-quality potential new members. Managed over 900+ students for social events (~10% of the entire class of 2028)'
     },
 
 
