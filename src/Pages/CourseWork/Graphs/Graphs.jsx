@@ -20,7 +20,7 @@ const Graphs = () => {
                     </Container>
                 </div>
 
-                <div className='Experience'>
+                <div className='Experience '>
                     <ExperienceMain />
                 </div>
 

@@ -16,7 +16,7 @@ const Footer = () => {
                 </h2>
 
                 <div className="copyright">
-                    &copy; 2024. All rights reserved.
+                    &copy; 2024. All rights reserved. 
                 </div>
             </Inset>
         </FooterStyled>
