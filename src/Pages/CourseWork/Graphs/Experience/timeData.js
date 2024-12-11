@@ -68,8 +68,8 @@ let timeData = [
         id: 10,
         date: '2024',
         h: 'University of Wisconsin-Madison',
-        c:'Pi Kappa Phi - Recruitment Chair',
-        p:'Developed a comprehensive recruitment strategy to attract high-quality potential new members. Managed over 900+ students for social events (~10% of the entire class of 2028)'
+        c:'Pi Kappa Phi - Vice Archon (Recruitment Chair)',
+        p:'Developed a comprehensive recruitment strategy to attract high-quality potential new members. Independently managed over 900+ students for social events (~10% of the entire class of 2028)'
     },
 
 
