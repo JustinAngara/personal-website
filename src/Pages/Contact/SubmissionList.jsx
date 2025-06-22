@@ -8,7 +8,7 @@ const SubmissionList = ({ submissions }) => {
     return (
         <SubmissionListStyled>
             {submissions.map((sub) => {
-                return <Submission key={sub.id} sub={sub} />;
+                return <Submission key={sub._id} sub={sub} />;
             })}
         </SubmissionListStyled>
     );

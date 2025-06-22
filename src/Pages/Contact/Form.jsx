@@ -1,7 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { v4 as uuid } from "uuid";
 import axios from "axios";
 
 // components
@@ -13,7 +12,6 @@ const Form = ({ getSubmissions }) => {
     const [inputName, setInputName] = useState("");
     const [inputEmail, setInputEmail] = useState("");
     const [inputMessage, setInputMessage] = useState("");
-
 
     // crud methods {create}
     const inputNameOnChange = (e) => {
@@ -30,17 +28,26 @@ const Form = ({ getSubmissions }) => {
         e.preventDefault();
 
         const postData = {
-            id: uuid(),
             name: inputName,
             email: inputEmail,
             message: inputMessage,
         };
 
-        await axios.post('http://localhost:4059/submissions', postData);
+        try {
+            await axios.post("http://localhost:4059/submissions", postData);
 
-        getSubmissions();
+            // Clear form after successful submission
+            setInputName("");
+            setInputEmail("");
+            setInputMessage("");
 
-        console.log("Submitted form");
+            // Refresh the submissions list
+            getSubmissions();
+
+            console.log("Submitted form successfully");
+        } catch (error) {
+            console.error("Error submitting form:", error);
+        }
     };
 
     return (

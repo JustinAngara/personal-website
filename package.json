@@ -7,7 +7,7 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "server": "json-server --watch ./src/api-server/emails-db.json --port 4059",
+        "server": "node server.js",
         "preview": "vite preview",
         "predeploy": "npm run build",
         "deploy": "git push origin main && gh-pages -d build"
@@ -23,9 +23,13 @@
         "axios": "^1.6.7",
         "bootstrap": "^5.3.3",
         "chart.js": "^4.4.2",
+        "cors": "^2.8.5",
+        "dotenv": "^16.5.0",
         "esm": "^3.2.25",
+        "express": "^5.1.0",
         "gh-pages": "^6.1.1",
         "json-server": "^1.0.0-alpha.23",
+        "mongoose": "^8.16.0",
         "primereact": "^10.6.2",
         "prop-types": "^15.8.1",
         "react": "^18.2.0",

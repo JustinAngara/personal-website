@@ -1,18 +1,15 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 import { Outlet } from "react-router-dom";
 const Background = () => {
     return (
-    <BackgroundStyled>
-
-
-        <Outlet />
-        <div className='upButton'></div>
-    </BackgroundStyled>);
-}
-
+        <BackgroundStyled>
+            <Outlet />
+            <div className="upButton"></div>
+        </BackgroundStyled>
+    );
+};
 
 export default Background;
-
 
 const BackgroundStyled = styled.div`
 
@@ -23,6 +20,41 @@ const BackgroundStyled = styled.div`
 
 
     // going to be our additional background layout
-    background-color: #3b3b3b;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23a3a3a3' fill-opacity='0.09'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 25%, #0d1117 50%, #1a1a1a 75%, #0a0a0a 100%);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(0, 255, 0, 0.03) 0%, transparent 70%);
+        animation: float 20s ease-in-out infinite;
+        pointer-events: none;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+            linear-gradient(90deg, transparent 98%, rgba(0, 255, 0, 0.1) 100%),
+            linear-gradient(0deg, transparent 98%, rgba(0, 255, 0, 0.1) 100%);
+        background-size: 50px 50px;
+        opacity: 0.3;
+        pointer-events: none;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translate(0, 0) rotate(0deg); }
+        25% { transform: translate(-10px, -10px) rotate(1deg); }
+        50% { transform: translate(10px, -5px) rotate(-1deg); }
+        75% { transform: translate(-5px, 10px) rotate(1deg); }
+    }
 `;

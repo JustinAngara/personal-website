@@ -5,31 +5,30 @@ import Inset from "../Inset.jsx";
 import SiteLogo from "../SiteLogo/SiteLogo.jsx";
 import MainMenu from "./MainMenu.jsx";
 import Navbar from "./Navbar.jsx";
-import { Button, Icon } from 'semantic-ui-react'
-import React, { useRef, useState, useEffect } from 'react';
+import { Button, Icon } from "semantic-ui-react";
+import React, { useRef, useState, useEffect } from "react";
 const MediumLarge = () => {
-    const [visible, setVisible] = useState(false)
+    const [visible, setVisible] = useState(false);
 
     const toggleVisible = () => {
-      const scrolled = document.documentElement.scrollTop;
-      if (scrolled > 300){
-        setVisible(true)
-      }
-      else if (scrolled <= 300){
-        setVisible(false)
-      }
+        const scrolled = document.documentElement.scrollTop;
+        if (scrolled > 300) {
+            setVisible(true);
+        } else if (scrolled <= 300) {
+            setVisible(false);
+        }
     };
 
-    const scrollToTop = () =>{
+    const scrollToTop = () => {
         window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-          /* you can also use 'auto' behaviour
+            top: 0,
+            behavior: "smooth",
+            /* you can also use 'auto' behaviour
              in place of 'smooth' */
         });
     };
 
-    window.addEventListener('scroll', toggleVisible);
+    window.addEventListener("scroll", toggleVisible);
     return (
         <MediumLargeStyled className="MediumLarge">
             <Inset>
@@ -40,13 +39,19 @@ const MediumLarge = () => {
                     <div className="logo">
                         <SiteLogo />
                     </div>
-
                 </div>
             </Inset>
 
-            <div className='scrollUp'>
+            <div className="scrollUp">
                 {/* this is where the button of sticky goes to  */}
-                <Button circular icon='angle up' size='massive' color='teal' onClick={scrollToTop} style={{display: visible ? 'inline' : 'none'}} />
+                <Button
+                    circular
+                    icon="angle up"
+                    size="massive"
+                    color="teal"
+                    onClick={scrollToTop}
+                    style={{ display: visible ? "inline" : "none" }}
+                />
             </div>
         </MediumLargeStyled>
     );
@@ -63,16 +68,14 @@ const MediumLargeStyled = styled.div`
             margin: auto;
             padding: 20px 0px;
             padding-bottom: 300px;
-
         }
     }
-    .menus{
-        justify-content:end;
+    .menus {
+        justify-content: end;
         float: right;
-        padding-top:10%;
+        padding-top: 10%;
 
         width: 25%;
-
     }
 
     nav {
@@ -84,11 +87,10 @@ const MediumLargeStyled = styled.div`
             line-height: 30px;
             margin: 0px 0px 20px 5px;
 
-
             text-align: center;
             font-size: 14px;
             opacity: 1;
-            color: #00246B;
+            color: #00246b;
             font-weight: bold;
             text-decoration: none;
             text-transform: uppercase;
@@ -100,16 +102,14 @@ const MediumLargeStyled = styled.div`
             }
 
             &.active {
-                color: #00246B;
-
+                color: #00246b;
             }
         }
     }
-    .scrollUp{
+    .scrollUp {
         position: fixed;
-        bottom:10%;
-        right:5%;
-
+        bottom: 10%;
+        right: 5%;
+        z-index: 1000;
     }
-
 `;

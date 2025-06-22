@@ -20,7 +20,7 @@ const Small = () => {
 
     const handleButtonClick = () => {
         // Logic to execute when a button is clicked
-        console.log('Button clicked from child component');
+        console.log("Button clicked from child component");
         hideMenu();
     };
 
@@ -29,8 +29,9 @@ const Small = () => {
             <Hamburger toggle={toggle} />
             <SiteLogo />
 
-            {showMenu && <MainMenu isLargeEnough={false} handle={handleButtonClick} />}
-
+            {showMenu && (
+                <MainMenu isLargeEnough={false} handle={handleButtonClick} />
+            )}
         </SmallStyled>
     );
 };
