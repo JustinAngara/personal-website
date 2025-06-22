@@ -68,9 +68,24 @@ let timeData = [
         id: 10,
         date: '2024',
         h: 'University of Wisconsin-Madison',
-        c:'Pi Kappa Phi - Vice Archon (Recruitment Chair)',
+        c:'Pi Kappa Phi - Recruitment Chair',
         p:'Developed a comprehensive recruitment strategy to attract high-quality potential new members. Independently managed over 900+ students for social events (~10% of the entire class of 2028)'
     },
+    {
+        id: 11,
+        date: '2025',
+        h: 'University of Wisconsin-Madison',
+        c:'AI & Prototyping Engineer Fellowship',
+        p:'AI Engineer'
+    },
+    {
+        id: 12,
+        date: '2025',
+        h: 'OpenQQuantify',
+        c:'Full-stack Software Engineer',
+        p:'Software Engineer'
+    },
+
 
 
 ]
