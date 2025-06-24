@@ -20,7 +20,7 @@ const BackgroundStyled = styled.div`
 
 
     // going to be our additional background layout
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 25%, #0d1117 50%, #1a1a1a 75%, #0a0a0a 100%);
+    background: linear-gradient(135deg, #000000 0%, #333A3F 25%, #333A3F  50%, #333A3F 75%, #333A3F  100%);
     position: relative;
     overflow: hidden;
 

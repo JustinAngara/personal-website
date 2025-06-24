@@ -11,7 +11,7 @@ const Home = () => {
 
     return (
         <HomeStyled>
-
+            <a href="https://github.com/JustinAngara">GitHub</a>
             <h1>Home</h1>
             <AboutMe />
             <Slideshow />

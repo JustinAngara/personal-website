@@ -86,7 +86,7 @@ Form.propTypes = {
 
 const FormStyled = styled.form`
     .input-group {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     label {
