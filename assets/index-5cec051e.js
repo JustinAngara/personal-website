@@ -1271,7 +1271,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
     }
 `,u2=({tabs:e,curTab:t,curTabUpdate:n})=>b(XN,{children:e.map(r=>b(l2,{tab:r,curTab:t,curTabUpdate:n},r.id))});u2.propTypes={tabs:F.array.isRequired};const XN=H.div``,JN=()=>{const[e,t]=P.useState(n0[0]);return T(ZN,{children:[b(u2,{tabs:n0,curTab:e,curTabUpdate:t}),b(s2,{curTab:e})]})},ZN=H.div`
     
-`,eI=()=>T(tI,{children:[b("a",{href:"https://github.com/JustinAngara",children:"GitHub"}),b("h1",{children:"Home"}),b(HN,{}),b(LN,{}),T(xi,{children:[b("h1",{children:"Welcome"}),b(JN,{})]})]}),tI=H.div`
+`,eI=()=>T(tI,{children:[b("h1",{children:"Home"}),b(HN,{}),b(LN,{}),T(xi,{children:[b("h1",{children:"Welcome"}),b(JN,{})]})]}),tI=H.div`
     h1 {
         display: none;
     }
