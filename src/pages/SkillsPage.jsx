@@ -116,11 +116,7 @@ const SkillsPage = () => {
                 <h4>Reverse Engineering</h4>
                 <p>System analysis, process injection techniques, memory manipulation, and security vulnerability research with hands-on experience in anti-cheat systems.</p>
               </Card>
-              <Card className="specialization-card">
-                <div className="specialization-icon">🤖</div>
-                <h4>AI & Automation</h4>
-                <p>GPT-powered scripts, computer vision applications, AR/VR development, and intelligent automation tools for real-world problem solving.</p>
-              </Card>
+      
               <Card className="specialization-card">
                 <div className="specialization-icon">🌐</div>
                 <h4>Full-Stack Development</h4>
