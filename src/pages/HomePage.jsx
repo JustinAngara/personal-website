@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Button from '../components/ui/Button';
 import GreekMythologyBackground from '../components/ui/GreekMythologyBackground';
 import { PERSONAL_INFO, SKILLS_DATA } from '../utils/constants';
@@ -6,6 +6,9 @@ import './HomePage.css';
 
 const HomePage = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [showSplash, setShowSplash] = useState(true);
+  const [fadeSplash, setFadeSplash] = useState(false);
+  const splashTimeout = useRef();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,8 +19,25 @@ const HomePage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    splashTimeout.current = setTimeout(() => setFadeSplash(true), 1200);
+    return () => clearTimeout(splashTimeout.current);
+  }, []);
+
+  useEffect(() => {
+    if (fadeSplash) {
+      splashTimeout.current = setTimeout(() => setShowSplash(false), 600);
+      return () => clearTimeout(splashTimeout.current);
+    }
+  }, [fadeSplash]);
+
   return (
     <div className="home-page">
+      {showSplash && (
+        <div className={`splash-screen${fadeSplash ? ' fade-out' : ''}`}>
+          <span className="splash-text">System.out.println("Hello, World!");</span>
+        </div>
+      )}
       <GreekMythologyBackground page="home" />
       {/* Hero Section */}
       <section className="hero-section">
