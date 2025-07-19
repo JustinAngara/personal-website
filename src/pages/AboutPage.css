@@ -1,0 +1,536 @@
+.about-page {
+  min-height: 100vh;
+  padding: 120px 20px 60px;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 60px;
+  color: white;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  background: linear-gradient(45deg, #fff, #f0f0f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-intro {
+  margin-bottom: 60px;
+}
+
+.intro-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.intro-card h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.intro-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.intro-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.intro-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stat {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  color: white;
+}
+
+.about-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.section h3 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Resume Section Styles */
+.resume-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.resume-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.actions-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 30px;
+}
+
+.actions-card h4 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.actions-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 24px;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pdf-viewer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.pdf-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0;
+  overflow: hidden;
+}
+
+.pdf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pdf-header h4 {
+  font-size: 1.3rem;
+  color: white;
+  margin: 0;
+}
+
+.page-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.page-info {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  min-width: 80px;
+  text-align: center;
+}
+
+.pdf-viewer {
+  position: relative;
+  min-height: 600px;
+  background: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pdf-iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #667eea, #764ba2);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 60px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 11px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: #667eea;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+}
+
+.timeline-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #667eea;
+}
+
+.timeline-content h4 {
+  font-size: 1.1rem;
+  color: #667eea;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.timeline-content h5 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.company-info {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.job-highlights {
+  list-style: none;
+  padding: 0;
+}
+
+.job-highlights li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.job-highlights li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.education-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+}
+
+.education-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.education-card h4 {
+  font-size: 1.3rem;
+  color: black;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.degree {
+  font-size: 1rem;
+  color: #667eea;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.graduation {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.education-highlights {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.education-highlights li {
+  padding: 8px 0;
+  color: #555;
+  border-bottom: 1px solid #eee;
+}
+
+.education-highlights li:last-child {
+  border-bottom: none;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.service-card h4 {
+  font-size: 1.3rem;
+  color: black;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.service-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.value-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-card h4 {
+  font-size: 1.3rem;
+  color: black;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.value-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-page {
+    padding: 100px 15px 40px;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+  }
+
+  .intro-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .section h3 {
+    font-size: 2rem;
+  }
+
+  .resume-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .pdf-header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 15px 20px;
+  }
+
+  .pdf-viewer {
+    min-height: 400px;
+    padding: 15px;
+  }
+
+  .pdf-iframe {
+    height: 400px;
+  }
+
+  .actions-card {
+    padding: 20px;
+  }
+
+  .actions-card h4 {
+    font-size: 1.5rem;
+  }
+
+  .timeline::before {
+    left: 15px;
+  }
+
+  .timeline-item {
+    padding-left: 50px;
+  }
+
+  .timeline-marker {
+    left: 6px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .timeline-content {
+    padding: 20px;
+  }
+
+  .education-grid,
+  .services-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .education-card,
+  .service-card,
+  .value-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .section h3 {
+    font-size: 1.8rem;
+  }
+
+  .pdf-header h4 {
+    font-size: 1.1rem;
+  }
+
+  .pdf-viewer {
+    min-height: 300px;
+    padding: 10px;
+  }
+
+  .pdf-iframe {
+    height: 300px;
+  }
+
+  .timeline-content {
+    padding: 15px;
+  }
+
+  .education-card,
+  .service-card,
+  .value-card {
+    padding: 15px;
+  }
+} 

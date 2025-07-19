@@ -1,0 +1,1643 @@
+.greek-background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #7209b7 100%);
+}
+
+.greek-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.greek-background-blur {
+  filter: blur(4px);
+  /* For extra effect on supported browsers: */
+  /* backdrop-filter: blur(4px); */
+}
+
+
+/* Smooth transitions */
+.section-transitions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.transition-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease, background 1s ease;
+  mix-blend-mode: multiply;
+}
+
+/* Atmospheric stars */
+.greek-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(2px 2px at 160px 30px, #ddd, transparent),
+    radial-gradient(2px 2px at 200px 60px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 240px 20px, #fff, transparent),
+    radial-gradient(1px 1px at 280px 70px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(2px 2px at 320px 40px, #eee, transparent),
+    radial-gradient(2px 2px at 360px 80px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 400px 30px, #fff, transparent),
+    radial-gradient(1px 1px at 440px 60px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(2px 2px at 480px 20px, #ddd, transparent),
+    radial-gradient(2px 2px at 520px 70px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 560px 40px, #fff, transparent),
+    radial-gradient(1px 1px at 600px 80px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(2px 2px at 640px 30px, #eee, transparent),
+    radial-gradient(2px 2px at 680px 60px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 720px 20px, #fff, transparent),
+    radial-gradient(1px 1px at 760px 70px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(2px 2px at 800px 40px, #ddd, transparent),
+    radial-gradient(2px 2px at 840px 80px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 880px 30px, #fff, transparent),
+    radial-gradient(1px 1px at 920px 60px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(2px 2px at 960px 20px, #eee, transparent),
+    radial-gradient(2px 2px at 1000px 70px, rgba(255,255,255,0.8), transparent);
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  animation: twinkle 4s ease-in-out infinite;
+  opacity: 0.3;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+/* Home Page - Colosseum and Athena */
+.home-bg .colosseum {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 50%;
+}
+
+.colosseum-base {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(135deg, #D2B48C, #CD853F);
+  border-radius: 20px 0 0 0;
+  border: 4px solid #8B4513;
+}
+
+.colosseum-arch {
+  position: absolute;
+  bottom: 0;
+  width: 60px;
+  height: 80px;
+  background: rgba(139, 69, 19, 0.3);
+  border: 3px solid #8B4513;
+  border-radius: 30px 30px 0 0;
+}
+
+.colosseum-arch:nth-child(1) { right: 20px; }
+.colosseum-arch:nth-child(2) { right: 90px; }
+.colosseum-arch:nth-child(3) { right: 160px; }
+.colosseum-arch:nth-child(4) { right: 230px; }
+.colosseum-arch:nth-child(5) { right: 300px; }
+.colosseum-arch:nth-child(6) { right: 370px; }
+.colosseum-arch:nth-child(7) { right: 440px; }
+.colosseum-arch:nth-child(8) { right: 510px; }
+
+.colosseum-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(135deg, #D2B48C, #CD853F);
+  border-radius: 20px 0 0 0;
+  border: 4px solid #8B4513;
+}
+
+.colosseum-pillar {
+  position: absolute;
+  top: 10px;
+  width: 20px;
+  height: 60px;
+  background: rgba(139, 69, 19, 0.4);
+  border: 2px solid #8B4513;
+  border-radius: 10px;
+}
+
+.colosseum-pillar:nth-child(1) { right: 40px; }
+.colosseum-pillar:nth-child(2) { right: 110px; }
+.colosseum-pillar:nth-child(3) { right: 180px; }
+.colosseum-pillar:nth-child(4) { right: 250px; }
+.colosseum-pillar:nth-child(5) { right: 320px; }
+
+/* Athena Goddess */
+.goddess.athena {
+  position: absolute;
+  left: 10%;
+  bottom: 20%;
+  width: 120px;
+  height: 200px;
+  animation: goddess-float 8s ease-in-out infinite;
+}
+
+.goddess-head {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.goddess-helmet {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 30px;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  border: 3px solid #B8860B;
+  border-radius: 25px 25px 0 0;
+}
+
+.helmet-plume {
+  position: absolute;
+  top: -15px;
+  right: 5px;
+  width: 8px;
+  height: 20px;
+  background: linear-gradient(to bottom, #FF0000, #8B0000);
+  border-radius: 4px;
+}
+
+.goddess-face {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: #F5DEB3;
+  border: 3px solid #DEB887;
+  border-radius: 50%;
+}
+
+.goddess-eye {
+  position: absolute;
+  top: 12px;
+  width: 6px;
+  height: 6px;
+  background: #2F4F4F;
+  border-radius: 50%;
+}
+
+.goddess-eye.left {
+  left: 8px;
+}
+
+.goddess-eye.right {
+  right: 8px;
+}
+
+.goddess-body {
+  position: relative;
+  width: 80px;
+  height: 120px;
+  margin: 10px auto 0;
+}
+
+.goddess-toga {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #FFFFFF, #F0F8FF);
+  border: 3px solid #D3D3D3;
+  border-radius: 40px 40px 20px 20px;
+  position: relative;
+}
+
+.goddess-armor {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.breastplate {
+  width: 40px;
+  height: 30px;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  border: 2px solid #B8860B;
+  border-radius: 20px 20px 0 0;
+}
+
+.arm-band {
+  position: absolute;
+  top: 10px;
+  width: 8px;
+  height: 20px;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  border: 2px solid #B8860B;
+  border-radius: 4px;
+}
+
+.arm-band.left {
+  left: -15px;
+}
+
+.arm-band.right {
+  right: -15px;
+}
+
+.goddess-weapons {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.spear {
+  position: absolute;
+  left: -20px;
+  bottom: 20px;
+  width: 4px;
+  height: 80px;
+  background: linear-gradient(to bottom, #8B4513, #A0522D);
+  border-radius: 2px;
+  transform: rotate(-15deg);
+}
+
+.spear::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid #FF0000;
+}
+
+.shield {
+  position: absolute;
+  right: -15px;
+  bottom: 30px;
+  width: 30px;
+  height: 40px;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  border: 3px solid #B8860B;
+  border-radius: 50%;
+}
+
+/* Floating clouds */
+.cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  animation: cloud-float 15s ease-in-out infinite;
+}
+
+.cloud-1 {
+  width: 80px;
+  height: 40px;
+  top: 15%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.cloud-2 {
+  width: 60px;
+  height: 30px;
+  top: 25%;
+  right: 30%;
+  animation-delay: 3s;
+}
+
+.cloud-3 {
+  width: 100px;
+  height: 50px;
+  top: 35%;
+  left: 60%;
+  animation-delay: 6s;
+}
+
+.cloud-4 {
+  width: 70px;
+  height: 35px;
+  top: 45%;
+  right: 10%;
+  animation-delay: 9s;
+}
+
+/* Lightning bolts */
+.lightning {
+  position: absolute;
+  width: 4px;
+  height: 60px;
+  background: linear-gradient(to bottom, #FFD700, #FFA500);
+  animation: lightning-flash 4s ease-in-out infinite;
+}
+
+.lightning-1 {
+  top: 20%;
+  right: 40%;
+  animation-delay: 0s;
+}
+
+.lightning-2 {
+  top: 30%;
+  right: 60%;
+  animation-delay: 2s;
+}
+
+/* Laurel wreaths */
+.laurel-wreath {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.6;
+  animation: wreath-float 6s ease-in-out infinite;
+}
+
+.wreath-1 {
+  top: 50%;
+  left: 30%;
+  animation-delay: 0s;
+}
+
+.wreath-2 {
+  top: 60%;
+  right: 25%;
+  animation-delay: 2s;
+}
+
+.wreath-3 {
+  top: 40%;
+  left: 70%;
+  animation-delay: 4s;
+}
+
+/* About Page - Temple and Hermes */
+.about-bg .temple {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  width: 300px;
+  height: 200px;
+}
+
+.temple-roof {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(135deg, #D2B48C, #CD853F);
+  border: 4px solid #8B4513;
+  border-radius: 20px 20px 0 0;
+}
+
+.temple-pediment {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 30px solid rgba(139, 69, 19, 0.3);
+}
+
+.temple-columns {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.column {
+  width: 20px;
+  height: 80%;
+  background: linear-gradient(to bottom, #F5F5DC, #DEB887);
+  border: 3px solid #8B4513;
+  border-radius: 10px;
+  position: relative;
+}
+
+.column::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 20px;
+  background: linear-gradient(135deg, #D2B48C, #CD853F);
+  border: 3px solid #8B4513;
+  border-radius: 15px 15px 0 0;
+}
+
+.temple-base {
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(135deg, #8B4513, #A0522D);
+  border-radius: 10px;
+}
+
+/* Hermes God */
+.goddess.hermes {
+  position: absolute;
+  left: 15%;
+  bottom: 25%;
+  width: 100px;
+  height: 160px;
+  animation: hermes-speed 6s ease-in-out infinite;
+}
+
+.winged-helmet {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 25px;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  border: 3px solid #B8860B;
+  border-radius: 20px 20px 0 0;
+}
+
+.winged-helmet::before,
+.winged-helmet::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  width: 15px;
+  height: 10px;
+  background: linear-gradient(135deg, #87CEEB, #4682B4);
+  border-radius: 50%;
+  animation: wing-flap 0.5s ease-in-out infinite;
+}
+
+.winged-helmet::before {
+  left: -10px;
+}
+
+.winged-helmet::after {
+  right: -10px;
+}
+
+.winged-sandals {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.wing {
+  position: absolute;
+  bottom: 10px;
+  width: 20px;
+  height: 15px;
+  background: linear-gradient(135deg, #87CEEB, #4682B4);
+  border-radius: 50%;
+  animation: wing-flap 0.5s ease-in-out infinite;
+}
+
+.wing.left {
+  left: 10px;
+}
+
+.wing.right {
+  right: 10px;
+}
+
+.caduceus {
+  position: absolute;
+  right: -10px;
+  bottom: 40px;
+  width: 4px;
+  height: 60px;
+  background: linear-gradient(to bottom, #8B4513, #A0522D);
+  border-radius: 2px;
+}
+
+.caduceus::before {
+  content: '☤';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: #FFD700;
+}
+
+/* Scroll of Knowledge */
+.scroll {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 80px;
+  animation: scroll-unroll 8s ease-in-out infinite;
+}
+
+.scroll-paper {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #F5F5DC, #DEB887);
+  border: 3px solid #8B4513;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.scroll-text {
+  font-size: 0.8rem;
+  color: #8B4513;
+  font-weight: bold;
+  text-align: center;
+}
+
+.scroll-ends {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.scroll-end {
+  position: absolute;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  background: linear-gradient(135deg, #8B4513, #A0522D);
+  border-radius: 8px;
+}
+
+.scroll-end.left {
+  left: -10px;
+}
+
+.scroll-end.right {
+  right: -10px;
+}
+
+/* Greek symbols */
+.greek-symbol {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.6;
+  animation: symbol-float 7s ease-in-out infinite;
+}
+
+.symbol-1 {
+  top: 20%;
+  right: 20%;
+  animation-delay: 0s;
+}
+
+.symbol-2 {
+  top: 60%;
+  left: 20%;
+  animation-delay: 2s;
+}
+
+.symbol-3 {
+  top: 40%;
+  right: 10%;
+  animation-delay: 4s;
+}
+
+/* Projects Page - Mount Olympus and Zeus */
+.projects-bg .mount-olympus {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: 60%;
+}
+
+.mountain-base {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(135deg, #8B4513, #A0522D);
+  border-radius: 50px 0 0 0;
+}
+
+.mountain-peak {
+  position: absolute;
+  bottom: 40%;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 80px solid rgba(255, 255, 255, 0.3);
+}
+
+.peak-1 {
+  right: 20%;
+  animation: peak-glow 10s ease-in-out infinite;
+}
+
+.peak-2 {
+  right: 40%;
+  animation: peak-glow 10s ease-in-out infinite 2s;
+}
+
+.peak-3 {
+  right: 60%;
+  animation: peak-glow 10s ease-in-out infinite 4s;
+}
+
+/* Zeus God */
+.goddess.zeus {
+  position: absolute;
+  left: 10%;
+  bottom: 30%;
+  width: 120px;
+  height: 200px;
+  animation: zeus-thunder 8s ease-in-out infinite;
+}
+
+.crown {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 25px;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  border: 3px solid #B8860B;
+  border-radius: 25px 25px 0 0;
+}
+
+.crown::before {
+  content: '⚡';
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  color: #FFD700;
+}
+
+.goddess-beard {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 15px;
+  background: #8B4513;
+  border-radius: 15px 15px 0 0;
+}
+
+.thunder-clouds {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 30px;
+  background: rgba(105, 105, 105, 0.3);
+  border-radius: 15px;
+}
+
+.cloud-bolt {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 20px;
+  background: #FFD700;
+  animation: bolt-flash 2s ease-in-out infinite;
+}
+
+.thunderbolt {
+  position: absolute;
+  right: -20px;
+  bottom: 60px;
+  width: 6px;
+  height: 40px;
+  background: linear-gradient(to bottom, #FFD700, #FFA500);
+  border-radius: 3px;
+  animation: thunder-shake 3s ease-in-out infinite;
+}
+
+/* Achievements */
+.achievement {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: achievement-glow 5s ease-in-out infinite;
+}
+
+.achievement-1 {
+  top: 30%;
+  right: 25%;
+  animation-delay: 0s;
+}
+
+.achievement-2 {
+  top: 50%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.achievement-3 {
+  top: 70%;
+  right: 35%;
+  animation-delay: 2s;
+}
+
+.achievement-medal {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.achievement-text {
+  font-size: 0.7rem;
+  color: #8B4513;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+/* Lightning effects */
+.lightning-effect {
+  position: absolute;
+  width: 3px;
+  height: 50px;
+  background: linear-gradient(to bottom, #FFD700, #FFA500);
+  animation: lightning-strike 4s ease-in-out infinite;
+}
+
+.lightning-1 {
+  top: 20%;
+  right: 40%;
+  animation-delay: 0s;
+}
+
+.lightning-2 {
+  top: 40%;
+  right: 60%;
+  animation-delay: 1s;
+}
+
+.lightning-3 {
+  top: 60%;
+  right: 30%;
+  animation-delay: 2s;
+}
+
+/* Skills Page - Forge and Hephaestus */
+.skills-bg .forge {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  width: 200px;
+  height: 150px;
+}
+
+.forge-building {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 80%;
+  background: linear-gradient(135deg, #8B4513, #A0522D);
+  border: 4px solid #654321;
+  border-radius: 20px 20px 0 0;
+}
+
+.forge-roof {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(135deg, #654321, #8B4513);
+  border-radius: 15px 15px 0 0;
+}
+
+.forge-door {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 50px;
+  background: #654321;
+  border: 2px solid #8B4513;
+  border-radius: 5px 5px 0 0;
+}
+
+.forge-window {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid #8B4513;
+  border-radius: 50%;
+}
+
+.forge-fire {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 30px;
+}
+
+.fire-flame {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 20px solid #FF4500;
+  animation: fire-flicker 0.5s ease-in-out infinite;
+}
+
+.flame-1 {
+  animation-delay: 0s;
+}
+
+.flame-2 {
+  left: 30%;
+  animation-delay: 0.2s;
+}
+
+.flame-3 {
+  left: 70%;
+  animation-delay: 0.4s;
+}
+
+/* Hephaestus God */
+.goddess.hephaestus {
+  position: absolute;
+  left: 15%;
+  bottom: 25%;
+  width: 100px;
+  height: 160px;
+  animation: hephaestus-hammer 6s ease-in-out infinite;
+}
+
+.smith-cap {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 20px;
+  background: #654321;
+  border: 3px solid #8B4513;
+  border-radius: 20px 20px 0 0;
+}
+
+.smith-apron {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 40px;
+  background: #8B4513;
+  border: 2px solid #654321;
+  border-radius: 10px;
+}
+
+.hammer {
+  position: absolute;
+  right: -15px;
+  bottom: 40px;
+  width: 6px;
+  height: 50px;
+  background: linear-gradient(to bottom, #8B4513, #A0522D);
+  border-radius: 3px;
+}
+
+.hammer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 8px;
+  background: #654321;
+  border-radius: 4px;
+}
+
+.anvil {
+  position: absolute;
+  left: -20px;
+  bottom: 30px;
+  width: 30px;
+  height: 20px;
+  background: #696969;
+  border: 3px solid #2F4F4F;
+  border-radius: 5px;
+}
+
+/* Skill tools */
+.skill-tool {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.6;
+  animation: tool-float 8s ease-in-out infinite;
+}
+
+.tool-1 {
+  top: 30%;
+  right: 30%;
+  animation-delay: 0s;
+}
+
+.tool-2 {
+  top: 50%;
+  right: 20%;
+  animation-delay: 2s;
+}
+
+.tool-3 {
+  top: 70%;
+  right: 40%;
+  animation-delay: 4s;
+}
+
+.tool-4 {
+  top: 40%;
+  right: 10%;
+  animation-delay: 6s;
+}
+
+/* Skill columns */
+.skill-column {
+  position: absolute;
+  width: 25px;
+  height: 80px;
+  background: linear-gradient(to bottom, #F5F5DC, #DEB887);
+  border: 3px solid #8B4513;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.column-1 {
+  top: 40%;
+  right: 50%;
+}
+
+.column-2 {
+  top: 50%;
+  right: 45%;
+}
+
+.column-3 {
+  top: 60%;
+  right: 40%;
+}
+
+.column-fill {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, #FFD700, #FFA500);
+  border-radius: 0 0 10px 10px;
+  animation: column-fill 4s ease-in-out infinite;
+}
+
+/* Contact Page - Temple and Iris */
+.contact-bg .communication-temple {
+  position: absolute;
+  bottom: 0;
+  right: 15%;
+  width: 250px;
+  height: 180px;
+}
+
+/* Iris Goddess */
+.goddess.iris {
+  position: absolute;
+  left: 10%;
+  bottom: 30%;
+  width: 100px;
+  height: 160px;
+  animation: iris-rainbow 7s ease-in-out infinite;
+}
+
+.rainbow-crown {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45px;
+  height: 20px;
+  background: linear-gradient(90deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #9400D3);
+  border: 3px solid #8B4513;
+  border-radius: 20px 20px 0 0;
+}
+
+.rainbow-wings {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+}
+
+.rainbow-wings .wing {
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 40px;
+  background: linear-gradient(135deg, #87CEEB, #4682B4);
+  border-radius: 50%;
+  animation: rainbow-wing 3s ease-in-out infinite;
+}
+
+.rainbow-wings .wing.left {
+  left: -25px;
+  animation-delay: 0s;
+}
+
+.rainbow-wings .wing.right {
+  right: -25px;
+  animation-delay: 1.5s;
+}
+
+.message-scroll {
+  position: absolute;
+  right: -10px;
+  bottom: 50px;
+  width: 25px;
+  height: 35px;
+  background: linear-gradient(135deg, #F5F5DC, #DEB887);
+  border: 2px solid #8B4513;
+  border-radius: 5px;
+}
+
+/* Message vases */
+.message-vase {
+  position: absolute;
+  width: 60px;
+  height: 80px;
+  animation: vase-float 6s ease-in-out infinite;
+}
+
+.vase-1 {
+  top: 40%;
+  right: 25%;
+  animation-delay: 0s;
+}
+
+.vase-2 {
+  top: 60%;
+  right: 35%;
+  animation-delay: 2s;
+}
+
+.vase-body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #F5F5DC, #DEB887);
+  border: 3px solid #8B4513;
+  border-radius: 30px 30px 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.vase-body::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 20px;
+  background: rgba(139, 69, 19, 0.2);
+  border-radius: 20px;
+}
+
+.vase-text {
+  font-size: 0.6rem;
+  color: #8B4513;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Rainbow bridges */
+.rainbow-bridge {
+  position: absolute;
+  height: 4px;
+  border-radius: 2px;
+  animation: rainbow-pulse 5s ease-in-out infinite;
+}
+
+.bridge-1 {
+  width: 80px;
+  top: 45%;
+  left: 40%;
+  background: linear-gradient(90deg, #FF0000, #FF7F00, #FFFF00);
+  transform: rotate(45deg);
+  animation-delay: 0s;
+}
+
+.bridge-2 {
+  width: 60px;
+  top: 55%;
+  right: 30%;
+  background: linear-gradient(90deg, #00FF00, #0000FF, #4B0082);
+  transform: rotate(-30deg);
+  animation-delay: 1s;
+}
+
+.bridge-3 {
+  width: 100px;
+  top: 65%;
+  left: 30%;
+  background: linear-gradient(90deg, #9400D3, #FF0000, #FF7F00);
+  transform: rotate(15deg);
+  animation-delay: 2s;
+}
+
+/* Animations */
+@keyframes goddess-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+}
+
+@keyframes cloud-float {
+  0%, 100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+}
+
+@keyframes lightning-flash {
+  0%, 90%, 100% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 1;
+  }
+}
+
+@keyframes wreath-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+}
+
+@keyframes hermes-speed {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes wing-flap {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.8);
+  }
+}
+
+@keyframes scroll-unroll {
+  0%, 100% {
+    transform: translateX(-50%) scaleY(1);
+  }
+  50% {
+    transform: translateX(-50%) scaleY(1.1);
+  }
+}
+
+@keyframes symbol-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes peak-glow {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes zeus-thunder {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes bolt-flash {
+  0%, 90%, 100% {
+    opacity: 0.3;
+  }
+  95% {
+    opacity: 1;
+  }
+}
+
+@keyframes thunder-shake {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes achievement-glow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes lightning-strike {
+  0%, 90%, 100% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 1;
+  }
+}
+
+@keyframes hephaestus-hammer {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+}
+
+@keyframes fire-flicker {
+  0%, 100% {
+    opacity: 0.8;
+    transform: translateX(-50%) scaleY(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) scaleY(1.2);
+  }
+}
+
+@keyframes tool-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes column-fill {
+  0%, 100% {
+    height: 60%;
+  }
+  50% {
+    height: 90%;
+  }
+}
+
+@keyframes iris-rainbow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes rainbow-wing {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes vase-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes rainbow-pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .greek-background-container {
+    opacity: 0.7;
+  }
+  
+  .goddess {
+    transform: scale(0.8);
+  }
+  
+  .colosseum,
+  .temple,
+  .mount-olympus,
+  .forge,
+  .communication-temple {
+    transform: scale(0.7);
+  }
+  
+  .laurel-wreath,
+  .greek-symbol,
+  .achievement-medal,
+  .skill-tool {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .greek-background-container {
+    opacity: 0.5;
+  }
+  
+  .goddess {
+    transform: scale(0.6);
+  }
+  
+  .colosseum,
+  .temple,
+  .mount-olympus,
+  .forge,
+  .communication-temple {
+    transform: scale(0.5);
+  }
+  
+  .laurel-wreath,
+  .greek-symbol,
+  .achievement-medal,
+  .skill-tool {
+    font-size: 1.2rem;
+  }
+}
+
+/* Additional Greek Columns */
+.greek-columns {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  display: flex;
+  gap: 20px;
+}
+
+.greek-columns .column {
+  width: 15px;
+  height: 120px;
+  background: linear-gradient(to bottom, #F5F5DC, #DEB887);
+  border: 2px solid #8B4513;
+  border-radius: 8px;
+  position: relative;
+}
+
+.greek-columns .column::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 25px;
+  height: 15px;
+  background: linear-gradient(135deg, #D2B48C, #CD853F);
+  border: 2px solid #8B4513;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Scroll-revealed elements */
+.scroll-revealed {
+  position: absolute;
+  animation: scroll-reveal 1s ease-out;
+}
+
+.scroll-element-1 {
+  top: 15%;
+  right: 15%;
+}
+
+.scroll-element-2 {
+  top: 45%;
+  left: 10%;
+}
+
+.scroll-element-3 {
+  top: 75%;
+  right: 20%;
+}
+
+.floating-temple {
+  width: 80px;
+  height: 60px;
+  background: linear-gradient(135deg, #D2B48C, #CD853F);
+  border: 3px solid #8B4513;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+}
+
+.floating-temple::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 15px solid rgba(139, 69, 19, 0.3);
+}
+
+.floating-statue {
+  font-size: 3rem;
+  opacity: 0.7;
+  animation: statue-float 8s ease-in-out infinite;
+}
+
+.floating-fire {
+  font-size: 2.5rem;
+  opacity: 0.8;
+  animation: fire-burn 2s ease-in-out infinite;
+}
+
+/* New animations for scroll elements */
+@keyframes scroll-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes statue-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes fire-burn {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(10deg);
+  }
+}
+
+/* Infinite scroll animations */
+@keyframes infinite-float {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+
+@keyframes infinite-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes infinite-pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+/* Smooth section transitions */
+@keyframes section-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced parallax for infinite elements */
+.infinite-colosseums .colosseum,
+.infinite-goddesses .goddess,
+.infinite-columns .greek-columns {
+  transition: opacity 0.8s ease, transform 0.3s ease;
+}
+
+.infinite-clouds .cloud {
+  transition: opacity 0.5s ease, transform 0.2s ease;
+}
+
+.infinite-lightning .lightning {
+  transition: opacity 0.3s ease, transform 0.1s ease;
+}
+
+.infinite-wreaths .laurel-wreath {
+  transition: opacity 0.6s ease, transform 0.4s ease;
+} 
