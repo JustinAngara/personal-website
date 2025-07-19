@@ -8,7 +8,9 @@ const HomePage = () => {
   const [scrollY, setScrollY] = useState(0);
   const [showSplash, setShowSplash] = useState(true);
   const [fadeSplash, setFadeSplash] = useState(false);
+  const [typedText, setTypedText] = useState("");
   const splashTimeout = useRef();
+  const fullText = 'System.out.println("Hello, World!");';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,10 +21,20 @@ const HomePage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Typing effect
   useEffect(() => {
-    splashTimeout.current = setTimeout(() => setFadeSplash(true), 1200);
-    return () => clearTimeout(splashTimeout.current);
-  }, []);
+    if (!showSplash) return;
+    if (typedText.length < fullText.length) {
+      const timeout = setTimeout(() => {
+        setTypedText(fullText.slice(0, typedText.length + 1));
+      }, 25); // was 40
+      return () => clearTimeout(timeout);
+    } else {
+      // Start fade after typing is done
+      splashTimeout.current = setTimeout(() => setFadeSplash(true), 700);
+      return () => clearTimeout(splashTimeout.current);
+    }
+  }, [typedText, showSplash]);
 
   useEffect(() => {
     if (fadeSplash) {
@@ -35,7 +47,7 @@ const HomePage = () => {
     <div className="home-page">
       {showSplash && (
         <div className={`splash-screen${fadeSplash ? ' fade-out' : ''}`}>
-          <span className="splash-text">System.out.println("Hello, World!");</span>
+          <span className="splash-text">{typedText}<span className="splash-cursor">|</span></span>
         </div>
       )}
       <GreekMythologyBackground page="home" />

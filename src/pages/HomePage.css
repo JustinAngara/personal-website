@@ -29,6 +29,17 @@
   text-align: center;
 }
 
+.splash-cursor {
+  display: inline-block;
+  width: 1ch;
+  animation: blink-cursor 1s steps(2, start) infinite;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 .fade-out {
   opacity: 0 !important;
   pointer-events: none;
