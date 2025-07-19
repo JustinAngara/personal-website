@@ -118,11 +118,6 @@ const HomePage = () => {
               <h3>Kernel & Systems Developer</h3>
               <p>Deep expertise in low-level programming, kernel development, and system-level security with hands-on experience in Windows kernel drivers.</p>
             </div>
-            <div className="about-card">
-              <div className="card-icon">🤖</div>
-              <h3>AI & Automation Specialist</h3>
-              <p>Building intelligent systems and automation tools, from GPT-powered scripts to computer vision applications for real-world problems.</p>
-            </div>
           </div>
         </div>
       </section>
