@@ -6,7 +6,7 @@ import './HomePage.css';
 
 const HomePage = () => {
   const [scrollY, setScrollY] = useState(0);
-  const [showSplash, setShowSplash] = useState(true);
+  const [showSplash, setShowSplash] = useState(() => !sessionStorage.getItem('splashShown'));
   const [fadeSplash, setFadeSplash] = useState(false);
   const [typedText, setTypedText] = useState("");
   const splashTimeout = useRef();
@@ -42,6 +42,12 @@ const HomePage = () => {
       return () => clearTimeout(splashTimeout.current);
     }
   }, [fadeSplash]);
+
+  useEffect(() => {
+    if (!showSplash) {
+      sessionStorage.setItem('splashShown', 'true');
+    }
+  }, [showSplash]);
 
   return (
     <div className="home-page">
