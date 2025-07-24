@@ -3,8 +3,17 @@ import Button from '../components/ui/Button';
 import GreekMythologyBackground from '../components/ui/GreekMythologyBackground';
 import { PERSONAL_INFO, WORK_EXPERIENCE, EDUCATION } from '../utils/constants';
 import './AboutPage.css';
+import { Document, Page } from 'react-pdf';
+import { useState } from 'react';
 
 const AboutPage = () => {
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
+
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+    setPageNumber(1);
+  }
 
   return (
     <div className="about-page">
@@ -85,13 +94,36 @@ const AboutPage = () => {
                   </div>
                   
                   <div className="pdf-viewer">
-                    <iframe
-                      src="/T_JUSTIN_ANGARA.pdf"
-                      title="Justin Angara Resume"
-                      className="pdf-iframe"
-                      width="100%"
-                      height="600"
-                    />
+                    <Document
+                      file="/T_JUSTIN_ANGARA.pdf"
+                      onLoadSuccess={onDocumentLoadSuccess}
+                      onLoadError={error => console.error('PDF load error:', error)}
+                      loading={<div>Loading PDF...</div>}
+                      error={<div>Could not load PDF. <a href="/T_JUSTIN_ANGARA.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a></div>}
+                    >
+                      <Page pageNumber={pageNumber} width={600} />
+                    </Document>
+                    {numPages && (
+                      <div className="pdf-pagination">
+                        <Button
+                          variant="outline"
+                          size="small"
+                          onClick={() => setPageNumber(prev => Math.max(prev - 1, 1))}
+                          disabled={pageNumber <= 1}
+                        >
+                          Previous
+                        </Button>
+                        <span style={{ margin: '0 8px' }}>Page {pageNumber} of {numPages}</span>
+                        <Button
+                          variant="outline"
+                          size="small"
+                          onClick={() => setPageNumber(prev => Math.min(prev + 1, numPages))}
+                          disabled={pageNumber >= numPages}
+                        >
+                          Next
+                        </Button>
+                      </div>
+                    )}
                   </div>
                 </Card>
               </div>
