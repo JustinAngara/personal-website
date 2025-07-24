@@ -58,7 +58,7 @@ export const PERSONAL_INFO = {
 // Work Experience
 export const WORK_EXPERIENCE = [
   {
-    title: 'Independent Software Engineer - Telecom Data Tools & AI/GPT Integration',
+    title: 'Software Engineer Contractor for Telecom Data Tools & AI/GPT Integration',
     company: 'Fortune 500 Wireless Industry Client',
     location: 'Chicago, IL',
     period: 'May 2025 - Present',
