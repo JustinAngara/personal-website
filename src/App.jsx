@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ProjectsPage from './pages/ProjectsPage';
 import SkillsPage from './pages/SkillsPage';
+import WrappedPage from './pages/WrappedPage';
 import ContactPage from './pages/ContactPage';
 import useScrollToTop from './hooks/useScrollToTop';
 import Button from './components/ui/Button';
@@ -23,6 +24,7 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/skills" element={<SkillsPage />} />
+            <Route path="/wrapped" element={ <WrappedPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>

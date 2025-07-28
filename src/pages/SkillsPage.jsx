@@ -37,11 +37,7 @@ const SkillsPage = () => {
                     {skill === 'Python' && '🐍'}
                   </div>
                   <h4>{skill}</h4>
-                  <div className="skill-level">
-                    <div className="skill-bar">
-                      <div className="skill-fill" style={{ width: '90%' }}></div>
-                    </div>
-                  </div>
+                  
                 </Card>
               ))}
             </div>
@@ -66,11 +62,7 @@ const SkillsPage = () => {
                     {skill === 'OpenAI/GPT' && '🤖'}
                   </div>
                   <h4>{skill}</h4>
-                  <div className="skill-level">
-                    <div className="skill-bar">
-                      <div className="skill-fill" style={{ width: '85%' }}></div>
-                    </div>
-                  </div>
+                  
                 </Card>
               ))}
             </div>
@@ -93,11 +85,7 @@ const SkillsPage = () => {
                     {skill === 'AR/VR Development' && '🥽'}
                   </div>
                   <h4>{skill}</h4>
-                  <div className="skill-level">
-                    <div className="skill-bar">
-                      <div className="skill-fill" style={{ width: '88%' }}></div>
-                    </div>
-                  </div>
+            
                 </Card>
               ))}
             </div>
@@ -106,6 +94,13 @@ const SkillsPage = () => {
           <div className="section">
             <h3>Areas of Specialization</h3>
             <div className="specialization-grid">
+      
+              <Card className="specialization-card">
+                <div className="specialization-icon">🌐</div>
+                <h4>Full-Stack Development</h4>
+                <p>Modern web applications using React, Flask backends, RESTful APIs, WebSockets, and database integration with security best practices.</p>
+              </Card>
+              
               <Card className="specialization-card">
                 <div className="specialization-icon">🔧</div>
                 <h4>Kernel Development</h4>
@@ -117,11 +112,6 @@ const SkillsPage = () => {
                 <p>System analysis, process injection techniques, memory manipulation, and security vulnerability research with hands-on experience in anti-cheat systems.</p>
               </Card>
       
-              <Card className="specialization-card">
-                <div className="specialization-icon">🌐</div>
-                <h4>Full-Stack Development</h4>
-                <p>Modern web applications using React, Flask backends, RESTful APIs, WebSockets, and database integration with security best practices.</p>
-              </Card>
             </div>
           </div>
         </div>

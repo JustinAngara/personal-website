@@ -94,15 +94,13 @@ const AboutPage = () => {
                   </div>
                   
                   <div className="pdf-viewer">
-                    <Document
-                      file="/T_JUSTIN_ANGARA.pdf"
-                      onLoadSuccess={onDocumentLoadSuccess}
-                      onLoadError={error => console.error('PDF load error:', error)}
-                      loading={<div>Loading PDF...</div>}
-                      error={<div>Could not load PDF. <a href="/T_JUSTIN_ANGARA.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a></div>}
+                    <Button 
+                      variant="primary" 
+                      size="large"
+                      onClick={() => window.open('https://justinangara.github.io/personal-website/T_JUSTIN_ANGARA.pdf', '_blank')}
                     >
-                      <Page pageNumber={pageNumber} width={600} />
-                    </Document>
+                      Download PDF
+                    </Button>
                     {numPages && (
                       <div className="pdf-pagination">
                         <Button
@@ -187,11 +185,7 @@ const AboutPage = () => {
                 <h4>Reverse Engineering</h4>
                 <p>Analyzing systems, process injection techniques, and security vulnerability research.</p>
               </Card>
-              <Card className="service-card">
-                <div className="service-icon">🤖</div>
-                <h4>AI & Automation</h4>
-                <p>GPT-powered scripts, computer vision applications, and intelligent automation tools.</p>
-              </Card>
+     
               <Card className="service-card">
                 <div className="service-icon">🌐</div>
                 <h4>Full-Stack Development</h4>
@@ -216,10 +210,7 @@ const AboutPage = () => {
                 <h4>Security-First</h4>
                 <p>Understanding system vulnerabilities and building secure, robust solutions is my priority.</p>
               </Card>
-              <Card className="value-card">
-                <h4>Continuous Learning</h4>
-                <p>Always exploring new technologies, from low-level systems to cutting-edge AI applications.</p>
-              </Card>
+ 
               <Card className="value-card">
                 <h4>Innovation</h4>
                 <p>Pushing boundaries and creating solutions that solve real-world problems in unique ways.</p>
