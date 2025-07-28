@@ -12,7 +12,7 @@ const ProjectsPage = () => {
       description: "A sophisticated Windows kernel driver that intercepts memory operations across 10+ games with <0ms latency. Features advanced memory virtualization layer for security testing and scans 10,000+ memory structures to detect overflows and corruption vectors.",
       technologies: ["C/C++", "Ring-0 Programming", "Windows Kernel Development", "SSDT Hooking"],
       image: "🔧",
-      liveUrl: "https://github.com/JustinAngara/Kernel-based-Windows-State-System",
+      liveUrl: "#",
       githubUrl: "https://github.com/JustinAngara/Kernel-based-Windows-State-System",
       featured: true,
       category: "Kernel Development"
@@ -34,8 +34,8 @@ const ProjectsPage = () => {
       description: "A modern, responsive portfolio website built with React and Vite. Features smooth animations, vertical scrolling design, and cartoonish artwork inspired by HackIllinois.",
       technologies: ["React", "Vite", "CSS3", "JavaScript", "React Router"],
       image: "🎨",
-      liveUrl: PERSONAL_INFO.website,
-      githubUrl: PERSONAL_INFO.github,
+      liveUrl: '#',
+      githubUrl: 'https://github.com/JustinAngara?tab=repositories',
       featured: false,
       category: "Web Apps"
     },
@@ -112,12 +112,8 @@ const ProjectsPage = () => {
                   ))}
                 </div>
                 <div className="project-links">
-                  <Button variant="primary" size="small" onClick={() => window.open(project.liveUrl, '_blank')}>
-                    {project.liveUrl.includes('youtube') ? 'Watch Demo' : 'Live Demo'}
-                  </Button>
-                  <Button variant="outline" size="small" onClick={() => window.open(project.githubUrl, '_blank')}>
-                    View Code
-                  </Button>
+                  {project.liveUrl =='#' ? <div></div>: <Button variant="outline" size="small" onClick={() => window.open(project.liveUrl, '_blank')}>View Demo</Button>}
+                  {project.githubUrl =='#' ? <div></div>: <Button variant="outline" size="small" onClick={() => window.open(project.githubUrl, '_blank')}>View Code</Button>}
                 </div>
               </div>
             </Card>
