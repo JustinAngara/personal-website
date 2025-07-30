@@ -10,7 +10,7 @@ const HomePage = () => {
   const [fadeSplash, setFadeSplash] = useState(false);
   const [typedText, setTypedText] = useState("");
   const splashTimeout = useRef();
-  const fullText = 'System.out.println("Hello, World!");';
+  const fullText = '"Hello, World!';
 
   useEffect(() => {
     const handleScroll = () => {
