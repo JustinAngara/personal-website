@@ -1,7 +1,7 @@
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import GreekMythologyBackground from '../components/ui/GreekMythologyBackground';
-import { PERSONAL_INFO } from '../utils/constants';
+import Card from '@src/components/ui/Card';
+import Button from '@src/components/ui/Button';
+import GreekMythologyBackground from '@src/components/ui/GreekMythologyBackground';
+import { PERSONAL_INFO } from '@src/utils/constants';
 import './ProjectsPage.css';
 import projects from './ProjectData';
 

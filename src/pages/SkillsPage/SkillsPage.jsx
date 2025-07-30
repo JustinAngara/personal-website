@@ -1,6 +1,6 @@
-import Card from '../components/ui/Card';
-import GreekMythologyBackground from '../components/ui/GreekMythologyBackground';
-import { SKILLS_DATA } from '../utils/constants';
+import Card from '@src/components/ui/Card';
+import GreekMythologyBackground from '@src/components/ui/GreekMythologyBackground';
+import { SKILLS_DATA } from '@src/utils/constants';
 import './SkillsPage.css';
 
 const SkillsPage = () => {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import GreekMythologyBackground from '../components/ui/GreekMythologyBackground';
+import GreekMythologyBackground from '@src/components/ui/GreekMythologyBackground';
 import './WrappedPage.css';
 
 const slides = [

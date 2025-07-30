@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import Button from '../components/ui/Button';
-import GreekMythologyBackground from '../components/ui/GreekMythologyBackground';
+import GreekMythologyBackground from '@src/components/ui/GreekMythologyBackground';
 import { PERSONAL_INFO, SKILLS_DATA } from '../utils/constants';
 import './HomePage.css';
 
