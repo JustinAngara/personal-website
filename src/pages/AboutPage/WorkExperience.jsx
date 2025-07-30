@@ -1,10 +1,9 @@
-const WorkExperience = (props) => {
-    // this annoying bug, WORK_EXPERIENCE alone is an object, you must go to the WORK_EXPERIENCE attribute
+const WorkExperience = ({ WORK_EXPERIENCE }) => {
 
     return (
         <div className="timeline">
             {
-                props.WORK_EXPERIENCE.map((job, index) => (
+                WORK_EXPERIENCE.map((job, index) => (
                     <div key={index} className="timeline-item">
                         <div className="timeline-marker"></div>
                         <div className="timeline-content">
