@@ -1,5 +1,9 @@
 import Card from '@src/components/ui/Card';
-import Button from '@src/components/ui/Button';
+
+import WorkExperience from './WorkExperience';
+import Education from './Education';
+import Resume from './Resume';
+
 import GreekMythologyBackground from '@src/components/ui/GreekMythologyBackground';
 import { PERSONAL_INFO, WORK_EXPERIENCE, EDUCATION } from '@src/utils/constants';
 import './AboutPage.css';
@@ -62,114 +66,17 @@ const AboutPage = () => {
         <div className="about-sections">
           <div className="section">
             <h3>Resume</h3>
-            <div className="resume-section">
-              <div className="resume-actions">
-                <Card className="actions-card">
-                  <h4>Justin Angara's Resume</h4>
-                  <p>View my complete professional experience, skills, and achievements.</p>
-                  <div className="action-buttons">
-                    <Button 
-                      variant="primary" 
-                      size="large"
-                      onClick={() => window.open('/T_JUSTIN_ANGARA.pdf', '_blank')}
-                    >
-                      Download PDF
-                    </Button>
-                    <Button 
-                      variant="outline" 
-                      size="large"
-                      onClick={() => window.open(`mailto:${PERSONAL_INFO.email}?subject=Resume Request`, '_blank')}
-                    >
-                      Request Copy
-                    </Button>
-                  </div>
-                </Card>
-              </div>
-
-              <div className="pdf-viewer-container">
-                <Card className="pdf-card">
-                  <div className="pdf-header">
-                    <h4>Resume Preview</h4>
-                    <p>View your resume directly in the browser</p>
-                  </div>
-                  
-                  <div className="pdf-viewer">
-                    <Button 
-                      variant="primary" 
-                      size="large"
-                      onClick={() => window.open('https://justinangara.github.io/personal-website/T_JUSTIN_ANGARA.pdf', '_blank')}
-                    >
-                      Download PDF
-                    </Button>
-                    {numPages && (
-                      <div className="pdf-pagination">
-                        <Button
-                          variant="outline"
-                          size="small"
-                          onClick={() => setPageNumber(prev => Math.max(prev - 1, 1))}
-                          disabled={pageNumber <= 1}
-                        >
-                          Previous
-                        </Button>
-                        <span style={{ margin: '0 8px' }}>Page {pageNumber} of {numPages}</span>
-                        <Button
-                          variant="outline"
-                          size="small"
-                          onClick={() => setPageNumber(prev => Math.min(prev + 1, numPages))}
-                          disabled={pageNumber >= numPages}
-                        >
-                          Next
-                        </Button>
-                      </div>
-                    )}
-                  </div>
-                </Card>
-              </div>
-            </div>
+            <Resume PERSONAL_INFO={PERSONAL_INFO} numPages={numPages} pageNumber = {pageNumber} setPageNumber = {setPageNumber}/>
           </div>
 
           <div className="section">
             <h3>Work Experience</h3>
-            <div className="timeline">
-              {WORK_EXPERIENCE.map((job, index) => (
-                <div key={index} className="timeline-item">
-                  <div className="timeline-marker"></div>
-                  <div className="timeline-content">
-                    <h4>{job.period}</h4>
-                    <h5>{job.title}</h5>
-                    <p className="company-info">{job.company} • {job.location}</p>
-                    <ul className="job-highlights">
-                      {job.highlights.map((highlight, hIndex) => (
-                        <li key={hIndex}>{highlight}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <WorkExperience WORK_EXPERIENCE = { WORK_EXPERIENCE }/>
           </div>
 
           <div className="section">
             <h3>Education</h3>
-            <div className="education-grid">
-              <Card className="education-card">
-                <div className="education-icon">🎓</div>
-                <h4>{EDUCATION.university}</h4>
-                <p className="degree">{EDUCATION.degree}</p>
-                <p className="graduation">Expected: {EDUCATION.graduation}</p>
-                <ul className="education-highlights">
-                  {EDUCATION.highlights.map((highlight, index) => (
-                    <li key={index}>{highlight}</li>
-                  ))}
-                </ul>
-              </Card>
-              <Card className="education-card">
-                <div className="education-icon">⚡</div>
-                <h4>{EDUCATION.bootcamp.name}</h4>
-                <p className="degree">Software Engineering Bootcamp</p>
-                <p className="graduation">Status: {EDUCATION.bootcamp.status}</p>
-              </Card>
-            </div>
+            <Education EDUCATION={ EDUCATION }/>
           </div>
 
           <div className="section">
