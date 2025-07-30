@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import GreekMythologyBackground from '../components/ui/GreekMythologyBackground';
-import { CONTACT_INFO, SOCIAL_LINKS } from '../utils/constants';
+import Card from '@src/components/ui/Card';
+import Button from '@src/components/ui/Button';
+import GreekMythologyBackground from '@src/components/ui/GreekMythologyBackground';
+import { CONTACT_INFO, SOCIAL_LINKS } from '@src/utils/constants';
 import './ContactPage.css';
 
 const ContactPage = () => {

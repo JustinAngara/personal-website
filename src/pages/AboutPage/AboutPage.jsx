@@ -1,9 +1,8 @@
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import GreekMythologyBackground from '../components/ui/GreekMythologyBackground';
-import { PERSONAL_INFO, WORK_EXPERIENCE, EDUCATION } from '../utils/constants';
+import Card from '@src/components/ui/Card';
+import Button from '@src/components/ui/Button';
+import GreekMythologyBackground from '@src/components/ui/GreekMythologyBackground';
+import { PERSONAL_INFO, WORK_EXPERIENCE, EDUCATION } from '@src/utils/constants';
 import './AboutPage.css';
-import { Document, Page } from 'react-pdf';
 import { useState } from 'react';
 
 const AboutPage = () => {
@@ -14,6 +13,7 @@ const AboutPage = () => {
     setNumPages(numPages);
     setPageNumber(1);
   }
+  
 
   return (
     <div className="about-page">

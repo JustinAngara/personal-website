@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import Button from '../components/ui/Button';
+import Button from '@src/components/ui/Button';
 import GreekMythologyBackground from '@src/components/ui/GreekMythologyBackground';
-import { PERSONAL_INFO, SKILLS_DATA } from '../utils/constants';
+import { PERSONAL_INFO, SKILLS_DATA } from '@src/utils/constants';
 import './HomePage.css';
 
 const HomePage = () => {

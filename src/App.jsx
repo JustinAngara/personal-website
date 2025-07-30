@@ -1,12 +1,12 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
+import HomePage from './pages/HomePage/HomePage';
+import AboutPage from './pages/AboutPage/AboutPage';
 import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
 import SkillsPage from './pages/SkillsPage/SkillsPage';
 import WrappedPage from './pages/WrappedPage/WrappedPage';
-import ContactPage from './pages/ContactPage';
+import ContactPage from './pages/ContactPage/ContactPage';
 import useScrollToTop from './hooks/useScrollToTop';
 import Button from './components/ui/Button';
 import { useState, useEffect } from 'react';
