@@ -45,14 +45,14 @@ const projects = [
 },
 {
     id: 5,
-    title: "Personal Portfolio Website",
-    description: "A modern, responsive portfolio website built with React and Vite. Features smooth animations, vertical scrolling design, and cartoonish artwork inspired by HackIllinois.",
+    title: "Fortnite Multi-Hack & Anti-Cheat Bypass",
+    description: "Fortnite cheat suite with features like Fortnite Festival, aimbot, triggerbot, and recoil control. Implements advanced anti-cheat bypass techniques to ensure undetectability while enhancing gameplay.",
     technologies: ["React", "Vite", "CSS3", "JavaScript", "React Router"],
     image: "🎨",
     liveUrl: '#',
-    githubUrl: 'https://github.com/JustinAngara?tab=repositories',
-    featured: false,
-    category: "Web Apps"
+    githubUrl: 'https://github.com/JustinAngara/FN-Finale',
+    featured: true,
+    category: "System Apps"
 },
 {
     id: 6,

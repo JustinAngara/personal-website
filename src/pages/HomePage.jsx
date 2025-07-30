@@ -87,10 +87,6 @@ const HomePage = () => {
             <p className="hero-description">
               {PERSONAL_INFO.description}
             </p>
-            <div className="hero-buttons">
-              <Button variant="primary" size="large">View My Work</Button>
-              <Button variant="secondary" size="large">Get In Touch</Button>
-            </div>
           </div>
         </div>
       </section>
