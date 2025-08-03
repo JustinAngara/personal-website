@@ -1,7 +1,7 @@
 import Card from '@src/components/ui/Card';
 import Button from '@src/components/ui/Button';
 import { Container } from '@mui/material';
-import resume from '@src/assets/T_JUSTIN_ANGARA.pdf';
+import resume from '@src/assets/T_JUSTIN_ANGARA_RESUME.pdf';
 
 const Resume = ({ PERSONAL_INFO }) => {
     return (
