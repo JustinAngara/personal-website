@@ -5,6 +5,10 @@
   z-index: 1;
 }
 
+img{
+  border-radius: 50%;
+}
+
 .splash-screen {
   position: fixed;
   top: 0;

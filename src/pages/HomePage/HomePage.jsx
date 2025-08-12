@@ -3,7 +3,7 @@ import Button from '@src/components/ui/Button';
 import GreekMythologyBackground from '@src/components/ui/GreekMythologyBackground';
 import { PERSONAL_INFO, SKILLS_DATA } from '@src/utils/constants';
 import './HomePage.css';
-
+import ProfilePic from '@src/utils/justin.jpeg'
 const HomePage = () => {
   const [scrollY, setScrollY] = useState(0);
   const [showSplash, setShowSplash] = useState(() => !sessionStorage.getItem('splashShown'));
@@ -71,14 +71,9 @@ const HomePage = () => {
         <div className="hero-content">
           <div className="profile-container">
             <div className="profile-avatar">
-              <div className="avatar-circle">
-                <div className="avatar-eyes">
-                  <div className="eye left-eye"></div>
-                  <div className="eye right-eye"></div>
-                </div>
-                <div className="avatar-smile"></div>
-              </div>
+              <img src={ProfilePic} />
             </div>
+
             <h1 className="hero-title">
               <span className="title-line">Hi, I'm</span>
               <span className="title-name">{PERSONAL_INFO.name}</span>
